@@ -4,8 +4,7 @@ def calcula_pontos(lista):
     
     pontuacao_final=0
     for i in range(len(lista)):
-        flat_list = [item for sublist in lista for item in sublist]
-        nome_pokemon        = flat_list[i]
+        nome_pokemon        = lista[i]
         url_valores         = 'http://pokeapi.co/api/v2/pokemon/'+nome_pokemon+'/'
         url_boleanos        = 'https://pokeapi.co/api/v2/pokemon-species/'+nome_pokemon+ '/'
         response_valores    = requests.get(url_valores)
@@ -23,3 +22,24 @@ def calcula_pontos(lista):
             pontuacao       = (base_experience*2 + ataque + ataque_especial)
         pontuacao_final+=pontuacao
     return pontuacao_final
+
+def coleta_base_experience(lista):
+    lista_base = []
+    for i in range(len(lista)):
+        nome_pokemon        = lista[i]
+        url                 = 'http://pokeapi.co/api/v2/pokemon/'+nome_pokemon+'/'
+        response            = requests.get(url)
+        data                = json.loads(response.text)
+        lista_base.append(data['base_experience'])
+    return lista_base
+
+def coleta_img(lista):
+    lista_img = []
+    for i in range(len(lista)):
+        nome_pokemon        = lista[i]
+        url                 = 'http://pokeapi.co/api/v2/pokemon/'+nome_pokemon+'/'
+        response            = requests.get(url)
+        data                = json.loads(response.text)
+        lista_img.append(data['sprites']['front_default'])
+    return lista_img
+
