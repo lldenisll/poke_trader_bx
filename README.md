@@ -3,7 +3,7 @@
   <p align="center">
     Want to trade some pokemons, but you are not sure if you are doing the right thing? Check out this poke trader calculator
     Our calculator focus on a fair trade, that doesnt favour any sides.
-    The calculator defines if the trade is fair, you only got to decide if you want the other side pokemons
+    The calculator defines if the trade is fair, you only got to decide if you want to trade the pokemons
     <br />
      <a href="https://github.com/lldenisll/poke_bx_front" targe="blank">Para português, acesse o repô do front-end</a>
     <br />
@@ -22,30 +22,30 @@
   <summary><h2 style="display: inline-block">About the project</h2></summary>
   <ol>
     <li>
-      <a href="#sobre-o-projeto">About</a>
+      <a href="#about">About</a>
       <ul>
-        <li><a href="#tecnologias">Tecnologies</a></li>
+        <li><a href="#tecnologies">Tecnologies</a></li>
       </ul>
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
     </li>
-    <li><a href="#metodologia-utilizada">Methodology</a></li>
-    <li><a href="#meu-contato">Contact</a></li>
+    <li><a href="#methodology">Methodology</a></li>
+    <li><a href="#my-contact">Contact</a></li>
   </ol>
 </details>
 
 
 
 <!-- ABOUT THE PROJECT -->
-## Sobre o projeto
-Projeto consiste em uma calculadora de trades de pokemon, para que o usuário possa calcular se
-uma troca é "justa" ou não. Uma troca consiste em dois jogadores ofertarem entre 1 e 6 pokemons de cada lado. Qualquer
-combinação é válida. Por exemplo, trocar 2 pokemons iguais por 4 pokemons distintos. A metodologia utilizada para avaliação dos pokemons está descrita abaixo
-O projeto foi desenvolvido com Python e Django no backend com banco de dados postgresql, o deploy foi feito no heroku. 
-O front end utiliza html css e js com VueJS para renderizar o histórico de trocas.
+## About
+This project aims to create a fair trade pokemon calculator. One trade consists on two players offering 1 to 6 pokemons each one.
+Any source of combination is valid.
+The methodology used to evaluete the pokemons is described on a section bellow
+The project was developed with python and django as backend with postgresql databse, and it was deployed on heroku.
+The front end in html + css + js and with some vue components to render the trade history
 
-### Tecnologias
+### Tecnologies
 
 * []() Python + Django + Django Rest Framework
 * []() Html + CSS + JS + VueJS
@@ -56,27 +56,27 @@ O front end utiliza html css e js com VueJS para renderizar o histórico de troc
 <!-- GETTING STARTED -->
 ## Getting Started
 
-Caso queira uma cópia dessa aplicação, siga os seguintes passos:
+If you wish for a local copy:
 
 ### Instalação back-end
 
-1. Clone o repô
+1. Clone repository
    ```sh
    git clone https://github.com/lldenisll/poke_trader_bx
    ```
-2. Crie um ambiente virtual
+2. Create virtual env
    ```sh
-   python3 -m venv /caminho/nova/virtual/env
+   python3 -m venv /path/to/virtual/env
    ```
-   3. Ative a virtual env
+   3. Activate virtual env
    ```sh
-   source/caminho/virtual/env/bin/activate
+   source/path/virtual/env/bin/activate
    ```
-3. Instale os requerimentos
+3. Install requirements
    ```sh
    pip install requirements.txt
    ```
-3. Faça as migrações para o db
+3. Make migrations
    ```sh
    python manage.py makemigrations
    python manage.py migrate
@@ -85,36 +85,36 @@ Caso queira uma cópia dessa aplicação, siga os seguintes passos:
    ```sh
    python manage.py runserver
    ```
-### Instalação front-end
+### Front-end install
 
-1. Clone o repô
+1. Clone repository
    ```sh
    git clone https://github.com/lldenisll/poke_bx_front
    ```
-2. Abra o index.html
+2. Open index.html
    ```sh
-   seja feliz :)
+   be happy :)
    ```
-### Integração com banco de dados
-Caso deseje rodar o projeto em um banco de dados próprio
+### Database
+If you wish to run local with your databse, please insert your local database information on the file settings.py at config folder, and make migrations again
+
+## Methodology
+The criteria was built after a data analysis on a jupyter notebook.
+In order to not use to much of the free API, and as a request of the api developers (fair use). It was utilized a dataset available at kaggle.
+
+With this datase, it was created 20 klusters, and it was clear the the kluster 3 included the most powerfull pokemons, and the most important features being: is_lengedary,base_exp and special atack
+
+In order to confirm these methodolgy a pokemon master was consulted and explained that some of the pokemons uses special attack, while others the normal attack. For example a Charmander perform better on special attacks (like ember) as a Machop perform better on normal attack (like punch). Therefore these are both important features.
+
+In conclusion the given pontuation to each pokemon follows the equation:
+`((base_exp*2) + attack + special_attack)*10(if is_legendary)`
 
 
-## Metodologia utilizada
 
-O critério foi adotado após uma analise de dados em um jupyter nootbook
-Para essa analise, afim de não consumir muito a API que é gratuita, a pedido deles (fair use) foi utilizado um dataset do kaggle.
-
-Através desse dataset foram criados 20 Klusters, e observou-se que o kluser 3 incluia os pokemons mais poderosos, e que as features mais importantes são: is_legendary e special_atack
-
-A fim de confirmar a informação, um mestre pokemon foi consultado, e elucidou que alguns pokemons utilizam o ataque especial (special atack), enquanto outros utilizam apenas o ataque normal (atack). Por exemplo o Charmander tem maior pontuação em special atack pois usa ataques como lança chamas, enquanto o machop, usa o ataque comum, como em investida por exemplo.
-
-Com isso a pontuação atribuida a cada pokemon seguiu considerou a experiência base do pokemon com peso 2 + o ataque + o ataque especial, o total é multiplicado por 10 caso o pokemon seja lendário ou mítico `((base_exp*2) + ataque + ataque_especial)*10(se lendário)`
+_To know more follow (portuguese only, sorry): [Documentação](https://lldenisll.github.io/poke_bx_front/metodologia.html)_
 
 
-_Para saber mais consulte a [Documentação](https://lldenisll.github.io/poke_bx_front/metodologia.html)_
-
-
-## Meu contato
+## My contact
 
 Dênis Gonçalves dos Santos 
 [![LinkedIn][linkedin-shield]][linkedin-url]
