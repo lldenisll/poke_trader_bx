@@ -11,7 +11,7 @@
     ·
     <a href="https://calm-inlet-80092.herokuapp.com/core/" targe="blank">Open API Heroku</a>
     ·
-    <a href="https://github.com/lldenisll/poke_bx_front" targe="blank">Frone-End Repository</a>
+    <a href="https://github.com/lldenisll/poke_bx_front" targe="blank">Front-End Repository</a>
   </p>
 </p>
 
@@ -102,7 +102,7 @@ If you wish to run local with your databse, please insert your local database in
 The criteria was built after a data analysis on a jupyter notebook.
 In order to not use to much of the free API, and as a request of the api developers (fair use). It was utilized a dataset available at kaggle.
 
-With this datase, it was created 20 klusters, and it was clear the the kluster 3 included the most powerfull pokemons, and the most important features being: is_lengedary,base_exp and special atack
+With this dataset, it was created 20 klusters, and it was clear the the kluster 3 included the most powerfull pokemons, and the most important features being: is_lengedary,base_exp and special attack
 
 In order to confirm these methodolgy a pokemon master was consulted and explained that some of the pokemons uses special attack, while others the normal attack. For example a Charmander perform better on special attacks (like ember) as a Machop perform better on normal attack (like punch). Therefore these are both important features.
 
