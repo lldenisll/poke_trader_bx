@@ -31,6 +31,8 @@
       <a href="#getting-started">Getting Started</a>
     </li>
     <li><a href="#methodology">Methodology</a></li>
+    <li><a href="#tests">Methodology</a></li>
+
     <li><a href="#my-contact">Contact</a></li>
   </ol>
 </details>
@@ -108,8 +110,15 @@ In order to confirm these methodolgy a pokemon master was consulted and explaine
 
 In conclusion the given pontuation to each pokemon follows the equation:
 `((base_exp*2) + attack + special_attack)*10(if is_legendary)`
+## Tests
 
-
+We can evaluate how close one pokemon is from another to evaluate if the trade is fair, or not. Besides we can tests with oposits clusters, e.g: none trade evolving cluster 3 against cluster 10 can be consider fair trade. Therefore the test.py included a cluster analysis beteween cluster 10 and 3.
+For a fair trade: 
+2 lists of pokemons in the cluster 3 
+2 lists of pokemons in the cluster 10
+For a unfair trade:
+1 list of pokemon in the custer 3 against 1 list of pokemon in the cluster 10
+1 list of pokemon in the custer 3 against 1 list of pokemon in the cluster 10
 
 _To know more follow (portuguese only, sorry): [Documentação](https://lldenisll.github.io/poke_bx_front/metodologia.html)_
 
