@@ -34,7 +34,6 @@
     </li>
     <li><a href="#methodology">Methodology</a></li>
     <li><a href="#tests">Methodology</a></li>
-
     <li><a href="#my-contact">Contact</a></li>
   </ol>
 </details>
