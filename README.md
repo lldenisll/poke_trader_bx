@@ -12,6 +12,8 @@
     <a href="https://calm-inlet-80092.herokuapp.com/core/" targe="blank">Open API Heroku</a>
     ·
     <a href="https://github.com/lldenisll/poke_bx_front" targe="blank">Front-End Repository</a>
+    .
+    <a href="http://denisdev.com/poke_bx_front/index.html" targe="blank">Open Front End (option 02)</a>
   </p>
 </p>
 
